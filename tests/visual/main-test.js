@@ -42,7 +42,8 @@ function compareScreenshots(fileName) {
       expect(img1.height).toEqual(img2.height);
 
       // Do the visual diff.
-      const diff = new PNG({width: img1.width, height: img2.height});
+			const diff = new PNG({width: img1.width, height: img2.height});
+			diff.pack().pipe(fs.createWriteStream('./screenshots/diff.png'));
       const numDiffPixels = pixelmatch(
           img1.data, img2.data, diff.data, img1.width, img1.height,
           {threshold: 0.1});
