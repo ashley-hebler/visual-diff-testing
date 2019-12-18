@@ -21,7 +21,7 @@
     "opn": "^5.4.0",
     "pixelmatch": "^4.0.2",
     "pngjs": "^3.4.0",
-    "puppeteer": "^1.13.0",
+    "puppeteer": "^2.0.0",
     "surge": "^0.21.3"
   }
 }
